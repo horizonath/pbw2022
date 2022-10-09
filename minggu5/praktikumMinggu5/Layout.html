@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        header {
+          background-color: rgb(116, 172, 255);
+          padding-bottom: 10px;
+          text-align: left;
+          font-size: 35px;
+          color: white;
+        }
+        
+        nav {
+          float: left;
+          width:20%;
+          height: 300px; 
+          background: rgb(255, 230, 207);
+          padding: 20px;
+        }
+
+        nav ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        article {
+          float: left;
+          height: 300px; 
+          width: 80%;
+          background-color: #f1f1f1;
+          padding: 20px;
+        }
+        
+        section::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        footer {
+          background-color: rgb(116, 172, 255);
+          padding: 1px;
+          text-align: right;
+          text-align: bottom;
+          size: 4px;
+          color: white;
+        }
+
+        @media (max-width: 600px) {
+          nav, article {
+            width: 100%;
+            height: auto;
+          }
+        }
+        </style>
+</head>
+<body>
+<header>
+  <h2>Beach</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Parangtritis</a></li>
+      <li><a href="#">Klayar</a></li>
+      <li><a href="#">Soge</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Parangtritis</h1>
+    <p>Parangtritis is located around 28 km (17 miles) from Yogyakarta this is the ideal distance to come for a day trip to take a break out of the city and soak up the roar of the waves and the astounding atmosphere. 
+        Here you’ll see some incredibly green lush hills set against the backdrop of a raging ocean.</p>
+    <p>With raging surf and salty sea breezes it will be hard not to feel rejuvenated and refreshed as soon as you arrive here. 
+        At night, the star light on the silvery-black dunes give the beach a mystical feeling, and it won’t be hard to understand why there are many local myths about this area. 
+        This whole region is filled with beaches, caves, lakes, paths and gravesites, each with their own mystical story.</p>
+  </article>
+</section>
+
+<footer>
+  <p>tourist destination in pacitan</p>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
