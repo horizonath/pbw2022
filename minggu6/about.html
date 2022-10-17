@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+label #cancel{
+  float: left;
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 40px;
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+#check:checked ~ section{
+  margin-left: 0px;
+}
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+  margin-left: -250px;
+  color: #fff;
+  text-shadow: 5px 5px 5px black;
+}
+
+section article p {
+  font-size: 16px;
+}
+
+article{
+  padding-left: 25%;
+}
+
+</style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>  
+    </label>
+    <div class="sidebar">
+        <header>My App</header>
+        <ul>
+            <li><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="LearningPath.html"><i class="fa fa-file"></i>Learning Path</a></li>
+            <li><a href="references.html"><i class="fa fa-user"></i>References</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Contact me</a></li>
+            <li><a href="about.html"><i class="fa fa-info"></i>About</a></li>
+        </ul>
+    </div>
+    <section style="padding-top: 250px ;">
+    <article> 
+      <h1 style="padding-bottom: 10px;">Tentang Saya </h1> 
+      <p> 
+          Hi, saya adalah web developer. 
+          Saat ini sedang belajar HTML. 
+      </p> 
+      <p> 
+          Saya masih baru dalam web development, karena itu 
+          saya tidak akan pernah berhenti belajar. 
+      </p> 
+      <p> 
+          Saya ingin menguasai bahasa HTML, CSS, dan Javascript. 
+          Simak video lengkap tentang saya. 
+      </p> 
+      <p style="padding-top:15px; padding-top: 15px;"> 
+          <video controls> 
+              <source src="video/video-about.webm" 
+type="video/webm"/> 
+          </video> 
+      </p> 
+    </article> 
+
+ 
+  <footer style="text-align: center; padding-top: 455px;"> 
+    <hr>
+    <p>Copyright &copy; 2020 Natanael.</p> 
+  </footer>
+    </section>
+
+</body>
+</html>
